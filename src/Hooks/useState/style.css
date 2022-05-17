@@ -13,6 +13,12 @@
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .reverse {
+    animation: App-logo-reverse infinite 20s linear;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,7 +38,40 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes App-logo-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  margin: 0px 15px;
+  background-color: #61DAFB;
+  color: #fff;
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: #166f88;
+
 }
