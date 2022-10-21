@@ -1,12 +1,13 @@
-import React, { Fragment, useEffect, useMemo, useState } from 'react';
+import React, { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import P from 'prop-types';
-import './style.css';
+// import './style.css';
 
-const Post = ({ post }) => {
+const Post = ({ post, handleClick }) => {
   console.log('Filho renderizou...');
+
   return (
     <div className="post">
-      <h1>{post.title}</h1>
+      <h1 onClick={() => handleClick(post.title)}>{post.title}</h1>
       <p>{post.body}</p>
     </div>
   );
@@ -18,11 +19,14 @@ Post.propTypes = {
     title: P.string,
     body: P.string,
   }),
+  handleClick: P.func,
 };
 
-const ComponentUseMemo = () => {
+const ComponentUseRef = () => {
   const [posts, setPosts] = useState([]);
   const [value, setValue] = useState('');
+  const input = useRef(null);
+  const contador = useRef(0);
 
   // const filtered = value
   //   ? posts.filter((post) => {
@@ -33,24 +37,39 @@ const ComponentUseMemo = () => {
   console.log('O Pai renderizou...');
 
   useEffect(() => {
-    setTimeout(() => {
-      fetch('https://jsonplaceholder.typicode.com/posts')
-        .then((response) => response.json())
-        .then((response) => setPosts(response));
-    }, [5000]);
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((response) => setPosts(response));
   }, []);
+
+  useEffect(() => {
+    input.current.focus();
+    console.log(input.current);
+  }, [value]);
+
+  useEffect(() => {
+    contador.current++;
+  });
+
+  const handleClick = (value) => {
+    setValue(value);
+  };
 
   return (
     <Fragment>
       <div className="App">
+        <h6>Renderizou: {contador.current}X</h6>
         <input
+          ref={input}
           type="search"
           placeholder="Fiter cards"
           onChange={(e) => setValue(e.target.value)}
           value={value}
         />
         {useMemo(() => {
-          return posts.map((post) => <Post key={post.id} post={post} />);
+          return posts.map((post) => (
+            <Post key={post.id} post={post} handleClick={handleClick} />
+          ));
         }, [posts])}
 
         {posts.length == 0 && (
@@ -65,4 +84,4 @@ const ComponentUseMemo = () => {
   );
 };
 
-export default ComponentUseMemo;
+export default ComponentUseRef;
