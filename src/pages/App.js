@@ -1,5 +1,7 @@
 import { Fragment } from 'react';
-import ComponentUseContext_3 from '../Hooks/useContext/useContext_3';
+// import ComponentUseReducer from '../Hooks/useReducer/useReducer';
+import ComponentUseReducer_2 from '../Hooks/useReducer/useReducer&useContext';
+// import ComponentUseContext_3 from '../Hooks/useContext/useContext_3';
 // import ComponentUseContext_2 from '../Hooks/useContext/UseContext_2';
 // import ComponentUseContext_1 from '../Hooks/useContext/UseContext_1';
 // import ComponentCicleLife from '../Hooks/useState/CicleLife';
@@ -29,7 +31,9 @@ function App() {
       {/* <ComponentUseRef /> */}
       {/* <ComponentUseContext_1 /> */}
       {/* <ComponentUseContext_2 /> */}
-      <ComponentUseContext_3 />
+      {/* <ComponentUseContext_3 /> */}
+      {/* <ComponentUseReducer /> */}
+      <ComponentUseReducer_2 />
     </Fragment>
   );
 }
