@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
+import ComponetUseMyHook from '../Hooks/useMyHooks/useMyHook';
 // import ComponentUseReducer from '../Hooks/useReducer/useReducer';
-import ComponentUseReducer_2 from '../Hooks/useReducer/useReducer&useContext';
+// import ComponentUseReducer_2 from '../Hooks/useReducer/useReducer&useContext';
 // import ComponentUseContext_3 from '../Hooks/useContext/useContext_3';
 // import ComponentUseContext_2 from '../Hooks/useContext/UseContext_2';
 // import ComponentUseContext_1 from '../Hooks/useContext/UseContext_1';
@@ -33,7 +34,8 @@ function App() {
       {/* <ComponentUseContext_2 /> */}
       {/* <ComponentUseContext_3 /> */}
       {/* <ComponentUseReducer /> */}
-      <ComponentUseReducer_2 />
+      {/* <ComponentUseReducer_2 /> */}
+      <ComponetUseMyHook />
     </Fragment>
   );
 }

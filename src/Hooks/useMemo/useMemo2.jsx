@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useMemo, useState } from 'react';
 import P from 'prop-types';
 import './style.css';
 
+//component de post
 const Post = ({ post }) => {
   console.log('Filho renderizou...');
   return (

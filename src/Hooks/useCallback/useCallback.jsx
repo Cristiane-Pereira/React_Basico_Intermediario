@@ -16,7 +16,7 @@ Button.propTypes = {
 const ComponentUseCallback = () => {
   const [count, setCount] = useState(0);
 
-  console.log('O Pai renderizou......');
+  console.log('O Pai renderizou......');use
 
   //Callback serve para otimizar e memorizar estados, pois só renderiza quando a sua dependência for chamada.
   const incrementCounter = useCallback((num) => {

@@ -78,7 +78,7 @@ function ComponentUseReducer() {
           </button>
           <button
             type="button"
-            onClick={() => dispatch({ type: 'action_existente' })}
+            onClick={() => dispatch({ type: 'action_inexistente' })}
             style={{
               padding: '10px',
               color: '#fff',
