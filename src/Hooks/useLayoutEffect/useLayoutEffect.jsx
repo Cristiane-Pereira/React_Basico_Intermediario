@@ -1,12 +1,12 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 
-export const ComponetUseMyHook_4 = () => {
+export const ComponetUseLayoutEffect = () => {
   const [counted, setCounted] = useState([0, 1, 2, 3, 4]);
   const divRef = useRef();
 
   useLayoutEffect(() => {
     const now = Date.now();
-    while (Date.now() < now + 1500);
+    while (Date.now() < now + 500);
     divRef.current.scrollTop = divRef.current.scrollHeight;
   });
 

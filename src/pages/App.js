@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
-import { ComponetUseMyHook_4 } from '../Hooks/useMyHooks/useLayoutEffect';
+import { ComponentUseDebugValue } from '../Hooks/useDebugValue/UseDebugValue';
+// import { ComponetUseLayoutEffect } from '../Hooks/useLayoutEffect/useLayoutEffect';
 // import ComponetUseMyHook_2 from '../Hooks/useMyHooks/useMyHooks_2';
 // import ComponetUseMyHook_3 from '../Hooks/useMyHooks/useMyHooks_3';
 // import { Posts } from '../template/Posts/Posts';
@@ -43,7 +44,8 @@ function App() {
       {/* <Posts /> */}
       {/* <ComponetUseMyHook_2 /> */}
       {/* <ComponetUseMyHook_3 /> */}
-      <ComponetUseMyHook_4 />
+      {/* <ComponetUseLayoutEffect /> */}
+      <ComponentUseDebugValue />
     </Fragment>
   );
 }
