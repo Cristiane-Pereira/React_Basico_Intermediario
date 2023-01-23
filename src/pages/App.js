@@ -1,5 +1,7 @@
 import { Fragment } from 'react';
-import { ComponentUseDebugValue } from '../Hooks/useDebugValue/UseDebugValue';
+import { ErrorBoundary } from '../components/ErrorBoundary/ErrorBoundary';
+// import { OrderExecuteHooks } from '../components/OrderExecuteHooks/OrderExecuteHooks';
+// import { ComponentUseDebugValue } from '../Hooks/useDebugValue/UseDebugValue';
 // import { ComponetUseLayoutEffect } from '../Hooks/useLayoutEffect/useLayoutEffect';
 // import ComponetUseMyHook_2 from '../Hooks/useMyHooks/useMyHooks_2';
 // import ComponetUseMyHook_3 from '../Hooks/useMyHooks/useMyHooks_3';
@@ -45,7 +47,9 @@ function App() {
       {/* <ComponetUseMyHook_2 /> */}
       {/* <ComponetUseMyHook_3 /> */}
       {/* <ComponetUseLayoutEffect /> */}
-      <ComponentUseDebugValue />
+      {/* <ComponentUseDebugValue /> */}
+      {/* <OrderExecuteHooks /> */}
+      <ErrorBoundary />
     </Fragment>
   );
 }
