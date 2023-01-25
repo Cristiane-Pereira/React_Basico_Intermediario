@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
-import { ErrorBoundary } from '../components/ErrorBoundary/ErrorBoundary';
+import LazyReactComponent from '../components/LazyComponent';
+// import { ErrorBoundary } from '../components/ErrorBoundary/ErrorBoundary';
 // import { OrderExecuteHooks } from '../components/OrderExecuteHooks/OrderExecuteHooks';
 // import { ComponentUseDebugValue } from '../Hooks/useDebugValue/UseDebugValue';
 // import { ComponetUseLayoutEffect } from '../Hooks/useLayoutEffect/useLayoutEffect';
@@ -49,7 +50,8 @@ function App() {
       {/* <ComponetUseLayoutEffect /> */}
       {/* <ComponentUseDebugValue /> */}
       {/* <OrderExecuteHooks /> */}
-      <ErrorBoundary />
+      {/* <ErrorBoundary /> */}
+      <LazyReactComponent />
     </Fragment>
   );
 }
