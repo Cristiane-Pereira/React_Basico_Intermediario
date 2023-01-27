@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
-import LazyReactComponent from '../components/LazyComponent';
+import { ComponetCounterProvider } from '../components/ComponentCounterProvider/ComponetCounterProvider';
+// import LazyReactComponent from '../components/LazyComponent';
 // import { ErrorBoundary } from '../components/ErrorBoundary/ErrorBoundary';
 // import { OrderExecuteHooks } from '../components/OrderExecuteHooks/OrderExecuteHooks';
 // import { ComponentUseDebugValue } from '../Hooks/useDebugValue/UseDebugValue';
@@ -51,7 +52,8 @@ function App() {
       {/* <ComponentUseDebugValue /> */}
       {/* <OrderExecuteHooks /> */}
       {/* <ErrorBoundary /> */}
-      <LazyReactComponent />
+      {/* <LazyReactComponent /> */}
+      <ComponetCounterProvider />
     </Fragment>
   );
 }
